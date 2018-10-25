@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<style type="text/css">
+
+	body{
+		background-color:#f5f6fa;
+		overflow: hidden;
+	}
+	.rotating-box {
+		width: 300px;
+		height: 300px;
+		margin: 10px auto;
+		perspective: 800px;
+	}
+	.container {
+		width: 300px;
+		animation: rotate 5s linear infinite;
+		transform-style: preserve-3d;
+		margin-top: 120px;
+	}
+	.container img {
+		height: 300px;
+		width: 300px;
+	}
+	.container div {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+	}
+	.depan {
+		transform: translateZ(150px);
+	}
+	.belakang {
+		transform: rotateY(180deg) translateZ(150px);
+	}
+
+	@keyframes rotate {
+		0%{transform: rotateY(0);}
+		100%{transform: rotateY(360deg);}
+	}
+</style>
+<body>
+	<div class="rotating-box">
+		<div class="container">
+			<div class="depan">
+				<img src="mega-mendung.svg">
+			</div>
+
+			<div class="belakang">
+				<img src="tugu.svg">
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
